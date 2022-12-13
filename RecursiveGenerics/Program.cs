@@ -1,69 +1,74 @@
-﻿var me = Person.New
+﻿using DesignPatterns.Builder.RecursiveGenerics;
+
+var me = Person.New
   .Called("Muhammed")
   .WorksAsA("Senior Software Developer")
   .Born(DateTime.UtcNow.AddYears(-29))
   .Build();
 Console.WriteLine(me);
 
-public class Person
+namespace DesignPatterns.Builder.RecursiveGenerics
 {
-    public string? Name;
-
-    public string? Position;
-
-    public DateTime DateOfBirth;
-
-    public class Builder : PersonBirthDateBuilder<Builder>
+    public class Person
     {
-        internal Builder() { }
+        public string? Name;
+
+        public string? Position;
+
+        public DateTime DateOfBirth;
+
+        public class Builder : PersonBirthDateBuilder<Builder>
+        {
+            internal Builder() { }
+        }
+
+        public static Builder New => new Builder();
+
+        public override string ToString()
+        {
+            return $"{nameof(Name)}: {Name}, {nameof(Position)}: {Position}, {nameof(DateOfBirth)} : {DateOfBirth}";
+        }
     }
 
-    public static Builder New => new Builder();
-
-    public override string ToString()
+    public abstract class PersonBuilder
     {
-        return $"{nameof(Name)}: {Name}, {nameof(Position)}: {Position}";
+        protected Person person = new Person();
+
+        public Person Build()
+        {
+            return person;
+        }
     }
-}
 
-public abstract class PersonBuilder
-{
-    protected Person person = new Person();
-
-    public Person Build()
+    public class PersonInfoBuilder<SELF> : PersonBuilder
+      where SELF : PersonInfoBuilder<SELF>
     {
-        return person;
+        public SELF Called(string name)
+        {
+            person.Name = name;
+            return (SELF)this;
+        }
     }
-}
 
-public class PersonInfoBuilder<SELF> : PersonBuilder
-  where SELF : PersonInfoBuilder<SELF>
-{
-    public SELF Called(string name)
+    public class PersonJobBuilder<SELF>
+      : PersonInfoBuilder<PersonJobBuilder<SELF>>
+      where SELF : PersonJobBuilder<SELF>
     {
-        person.Name = name;
-        return (SELF)this;
+        public SELF WorksAsA(string position)
+        {
+            person.Position = position;
+            return (SELF)this;
+        }
     }
-}
 
-public class PersonJobBuilder<SELF>
-  : PersonInfoBuilder<PersonJobBuilder<SELF>>
-  where SELF : PersonJobBuilder<SELF>
-{
-    public SELF WorksAsA(string position)
+    public class PersonBirthDateBuilder<SELF>
+      : PersonJobBuilder<PersonBirthDateBuilder<SELF>>
+      where SELF : PersonBirthDateBuilder<SELF>
     {
-        person.Position = position;
-        return (SELF)this;
-    }
-}
-
-public class PersonBirthDateBuilder<SELF>
-  : PersonJobBuilder<PersonBirthDateBuilder<SELF>>
-  where SELF : PersonBirthDateBuilder<SELF>
-{
-    public SELF Born(DateTime dateOfBirth)
-    {
-        person.DateOfBirth = dateOfBirth;
-        return (SELF)this;
+        public SELF Born(DateTime dateOfBirth)
+        {
+            person.DateOfBirth = dateOfBirth;
+            return (SELF)this;
+        }
     }
 }
