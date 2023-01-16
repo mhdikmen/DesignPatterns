@@ -72,8 +72,8 @@ public class FirstTestSuite
     }
 
     [Test]
-    public void PersonTest()
-    {
+    public void PersonTest()    {
+
         var expectedResult = @"public class Person
 {
   public string Name;
