@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{CE1FB70F-C62B-4331-B606-12290D6163C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursiveGenerics", "RecursiveGenerics\RecursiveGenerics.csproj", "{0236FB35-5F41-43F5-A936-3A6FFC9D46BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecursiveGenerics", "RecursiveGenerics\RecursiveGenerics.csproj", "{0236FB35-5F41-43F5-A936-3A6FFC9D46BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepwiseBuilder", "StepwiseBuilder\StepwiseBuilder.csproj", "{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +19,17 @@ Global
 		{0236FB35-5F41-43F5-A936-3A6FFC9D46BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0236FB35-5F41-43F5-A936-3A6FFC9D46BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0236FB35-5F41-43F5-A936-3A6FFC9D46BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0236FB35-5F41-43F5-A936-3A6FFC9D46BB} = {CE1FB70F-C62B-4331-B606-12290D6163C0}
+		{64C91EC1-10BA-42EA-AF4D-4390BDE2B0C0} = {CE1FB70F-C62B-4331-B606-12290D6163C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {026A9576-423A-4157-A238-3F9E0E0A62D8}
