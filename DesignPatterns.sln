@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyConstructor", "CopyCons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitDeepCopyInferface", "ExplicitDeepCopyInferface\ExplicitDeepCopyInferface.csproj", "{5ADF1F6B-F722-44E2-B1AB-1BE51B519202}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypeInheritance", "PrototypeInheritance\PrototypeInheritance.csproj", "{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -137,6 +139,10 @@ Global
 		{5ADF1F6B-F722-44E2-B1AB-1BE51B519202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ADF1F6B-F722-44E2-B1AB-1BE51B519202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ADF1F6B-F722-44E2-B1AB-1BE51B519202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,6 +168,7 @@ Global
 		{6D2450A8-15D8-4F0F-9800-7038FAC194C9} = {191E5D01-616B-49C7-93CB-94B42008CCDB}
 		{04F4208C-BD36-41D2-9664-7388978E3357} = {191E5D01-616B-49C7-93CB-94B42008CCDB}
 		{5ADF1F6B-F722-44E2-B1AB-1BE51B519202} = {191E5D01-616B-49C7-93CB-94B42008CCDB}
+		{D1F6809D-4780-436E-8D12-CEE8B3FFB8CB} = {191E5D01-616B-49C7-93CB-94B42008CCDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {026A9576-423A-4157-A238-3F9E0E0A62D8}

@@ -76,7 +76,7 @@ public class Person : IDeepCopyable<Person>
 
     public virtual void CopyTo(Person target)
     {
-        target.Names = (string[])Names.Clone();
+        target.Names = (string[])Names.Clone(); // semantic value 
         target.Address = Address.DeepCopy();
     }
 }
