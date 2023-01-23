@@ -1,4 +1,11 @@
-﻿public class Document
+﻿public static class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("running");
+    }
+}
+public class Document
 {
 }
 
